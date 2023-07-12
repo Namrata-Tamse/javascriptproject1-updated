@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #3D087B;
+    padding: 1rem 10rem;
+    display: flex;
+    gap: 30px;
+}
+
+.container .left-container,
+.right-container {
+    width: 50%;
+    position: relative;
+
+}
+
+.container .left-container .logo {
+    height: 100px;
+    width: 100%;
+}
+
+.container .set-day-time-routine {
+    height: 400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.set-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.set-routine-img {
+    width: 20%;
+}
+
+.routine-name {
+    width: 40%;
+}
+
+.routine-name h6 {
+    font-size: .9rem;
+    color: blueviolet;
+}
+
+
+
+.select-menu {
+    width: 100%;
+    width: 40%;
+    position: relative;
+
+}
+
+.select-menu .select-btn {
+    display: flex;
+    height: 30px;
+    background: #fff;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0px 1px 5px rgba(0, 0, 255, 0.1);
+    color: #62087b;
+}
+
+.select-btn i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.select-menu .options {
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    height: 200px;
+    overflow: scroll;
+}
+
+.select-menu.active .options {
+    display: block;
+}
+
+.options .option {
+    display: flex;
+    height: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 5px;
+    align-items: center;
+    background: #fff;
+}
+
+.options .option:hover {
+    background: #F2F2F2;
+}
+
+.option i {
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.option .option-text {
+    font-size: 15px;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.messages {
+    height: 60px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #6A419A;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    margin-top: 10px;
+
+}
+
+.second-message {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.set-alarm {
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+    background: linear-gradient(90deg, #8254EF, #FC5EFF);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+
+}
+
+.set-alarm-msg {
+    width: 50%;
+    height: 100px;
+    background-color: #6A419A;
+    color: #FC5EFF;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 5px;
+
+
+}
+
+
+.first-head-time {
+    height: 100px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 35px;
+    color: #C952F8;
+
+
+}
+
+.box-time {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    flex-direction: column;
+    color: #C952F8;
+    font-size: 20px;
+
+
+}
+
+.box-time:nth-child(2),
+.box-time:nth-child(3),
+.box-time:nth-child(4) {
+    background-color: #F6E2FF;
+    font-weight: 500;
+
+
+}
+
+.box-time:nth-child(5) {
+    background-color: #C952F8;
+    color: white;
+    font-size: 25px;
+}
+
+
+.timehead {
+    font-weight: bold;
+    color: #3D087B;
+}
+
+
+.greeting-message {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.greeting-message h5 {
+    color: #8E53F0;
+    font-size: 30px;
+    font-family: "Bauhaus Hv Bt";
+}
+
+
+.schedule-img {
+    height: auto;
+    width: 100%;
+}
+
+.schedule-img img {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width:1180px) {
+    .container {
+        padding: 3rem 1rem;
+        height: 100%;
+    }
+
+    .container .left-container,
+    .right-container {
+        width: 100%;
+
+    }
+
+    .second-message {
+        flex-direction: column;
+    }
+
+    .set-alarm {
+        width: 100%;
+        height: 80px;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .set-alarm-msg {
+        width: 100%;
+        font-size: 35px;
+        height: 200px;
+        line-height: 40px;
+        margin-top: 50px;
+    }
+
+    .messages {
+        height: 100px;
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .schedule-img {
+        height: 350px;
+    }
+
+    .schedule-img img {
+        height: 100%;
+    }
+
+    .box-time {
+        font-size: 15px;
+    }
+
+    .first-head-time {
+        gap: 10px;
+        height: 100px;
+    }
+
+    .greeting-message h5 {
+        font-size: 25px;
+    }
+
+    .greeting-message {
+        margin-top: 30px;
+    }
+
+    .container .left-container .logo {
+        width: 180px;
+    }
+
+    .container .left-container .logo img {
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width:1024px) {
+    .container {
+        padding: 3rem 1rem;
+        min-height: 100%;
+    }
+
+    .set-alarm-msg {
+
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width:820px) {
+    .container {
+        padding: 3rem 1rem;
+        height: 100%;
+    }
+}
+
+@media (max-width:663px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem 1rem;
+        height: auto;
+        position: relative;
+    }  
+    .time-counter{
+        position: absolute;
+        top: -135vh;
+        width: 100%;
+    }
+
+    .messages {
+        height: 60px;
+        font-size: 15px;
+        position: absolute;
+        top: 23vh;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 190px;
+    }
+
+}
+
+@media (max-width:600px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem 1rem;
+        height: auto;
+        position: relative;
+    }   
+    .time-counter{
+        position: absolute;
+        top: -118vh;
+        width: 100%;
+    }
+
+    .messages {
+        height: 60px;
+        font-size: 15px;
+        position: absolute;
+        top: 20vh;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 160px;
+    }
+
+    
+    .container .left-container,
+    .right-container {
+        width: 100%;
+
+    }
+
+    .second-message {
+        flex-direction: column;
+
+    }
+
+    
+
+    .set-alarm {
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .set-alarm-msg {
+        width: 100%;
+        font-size: 22px;
+        height: 150px;
+        line-height: 30px;
+        margin-top: 0;
+    }
+
+    .box-time {
+        font-size: 15px;
+    }
+
+    .first-head-time {
+        gap: 10px;
+        height: 80px;
+    }
+
+    .greeting-message h5 {
+        font-size: 25px;
+    }
+
+
+    .schedule-img {
+        height: auto;
+    }
+
+    .schedule-img img {
+        height: 100%;
+    }
+
+    .container .left-container .logo {
+        width: 180px;
+    }
+
+    .container .left-container .logo img {
+        width: 100%;
+    }
+}
+@media (max-width:540px) {
+    
+    .time-counter{
+        position: absolute;
+        top: -118vh;
+        width: 100%;
+    }
+
+    .messages {
+        height: 60px;
+        font-size: 15px;
+        position: absolute;
+        top: 20vh;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 160px;
+    }
+
+}
+
+@media (max-width:420px) {
+
+
+    .time-counter{
+        position: absolute;
+        top: -95vh;
+        width: 100%;
+    }
+
+    .messages {
+        height: 60px;
+        font-size: 15px;
+        position: absolute;
+        top: 18vh;  
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 180px;
+    }
+}
+
+@media (max-width:414px) {
+
+
+    .time-counter{
+        position: absolute;
+        top: -92vh;
+        width: 100%;
+    }
+
+    .messages {
+        height: 60px;
+        font-size: 15px;
+        position: absolute;
+        top: 18vh;  
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 180px;
+    }
+}
+
+@media (max-width:396px) {
+    
+    .time-counter{
+        position: absolute;
+        top: -100vh;
+        width: 100%;
+    }
+
+    .messages {
+        height: 60px;
+        font-size: 15px;
+        position: absolute;
+        top: 20vh;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 180px;
+    }
+}
+
+
+@media (max-width:380px) {
+    .box-time {
+        font-size: 12px;
+    }
+
+    .box-time:nth-child(5) {
+        font-size: 18px;
+    }
+    .time-counter{
+        position: absolute;
+        top: -128vh;
+        width: 100%;
+    }
+    .greeting-message h5 {
+        font-size: 20px;
+    }
+    .messages {
+        font-size: 13px;
+        position: absolute;
+        top: 24vh;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 180px;
+    }
+    .container .left-container .logo {
+        width: 160px;
+    }
+}
+
+
+@media (max-width:363px) {
+    .container .left-container .logo {
+        width: 150px;
+    }
+    .time-counter{
+        position: absolute;
+        top: -120vh;
+        width: 100%;
+    }
+
+    .messages {
+        position: absolute;
+        top: 22vh;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 180px;
+    }
+}
+
+@media (max-width:285px) {
+    .first-head-time {
+        padding: 5px;
+        gap: 1px;
+    
+    
+    }
+    .time-counter{
+        position: absolute;
+        top: -132vh;
+        width: 100%;
+    }
+
+    .messages {
+        position: absolute;
+        top: 22vh;
+        font-size: 12px;
+    }
+
+    .container .set-day-time-routine{
+        margin-top: 180px;
+    }
+}
